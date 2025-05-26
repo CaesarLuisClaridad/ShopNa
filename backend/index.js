@@ -10,6 +10,7 @@ import productRoutes from "./routes/product.js";
 import authRoutes from "./routes/auth.js";
 import orderRoutes from "./routes/order.js";
 import paymentRoutes from "./routes/payment.js";
+import cors from "cors";
 
 //error middleware
 import errorMiddleware from "./middleware/errors.js";

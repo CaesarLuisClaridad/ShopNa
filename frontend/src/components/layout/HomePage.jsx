@@ -68,7 +68,7 @@ const HomePage = () => {
           </>
         )}
 
-        <div className={keyword ? "col-12 col-md-12" : "col-12"}>
+        <div className={keyword ? "col-12 col-xl-9" : "col-12"}>
           <Search className="d-flex justify-content-center m-auto mt-3 d-lg-none w-75" />
            <div className="position-relative mt-2 mb-1 mb-lg-4 py-4 text-lg-center">
           <h2 className="fw-bold m-0">{keyword

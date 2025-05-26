@@ -47,6 +47,13 @@ app.use(
 //use to work with cookies easily
 app.use(cookieParser());
 
+app.use(cors({
+  origin: process.env.NODE_ENV === "PRODUCTION" 
+    ? "https://shopna-6dym.onrender.com"  // Production URL
+    : "http://localhost:3000",    // Development URL
+  credentials: true, 
+}));
+
 //routes
 app.use("/api/v1", productRoutes);
 app.use("/api/v1", authRoutes);

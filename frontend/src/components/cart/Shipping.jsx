@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { countries } from "countries-list";
 import { useDispatch, useSelector } from "react-redux";
 import { saveShippingInfo } from "../../redux/features/CartSlice";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Checkout_Steps from "./Checkout_Steps";
 import MetaData from "../layout/MetaData";
 
 const Shipping = () => {
   const countriesList = Object.values(countries);
+
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -36,6 +38,7 @@ const Shipping = () => {
     console.log("Shipping Info Submitted:", shippingData);
 
     dispatch(saveShippingInfo(shippingData));
+    navigate("/confirm_order");
   };
 
   return (
@@ -141,9 +144,10 @@ const Shipping = () => {
                 </select>
               </div>
 
-              <Link
+              <button
                 id="shipping_btn"
                 type="submit"
+                onClick={handleSubmit}
                 className="btn w-100 py-2 text-white fw-semibold"
                 style={{
                   background: "linear-gradient(135deg, #6A11CB, #2575FC)",
@@ -151,10 +155,9 @@ const Shipping = () => {
                   borderRadius: "8px",
                   letterSpacing: "0.05em",
                 }}
-                to="/confirm_order"
               >
                 CONTINUE
-              </Link>
+              </button>
             </form>
           </div>
         </div>

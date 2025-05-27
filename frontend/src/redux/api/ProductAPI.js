@@ -17,6 +17,7 @@ export const productApi = createApi({
           "ratings[gte]": params?.rating,
         },
       }), 
+      providesTags: ["Products"],
     }),
     getProductDetails: builder.query({
       query: (id) => `/products/${id}`, //for fetching product details

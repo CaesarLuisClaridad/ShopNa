@@ -14,6 +14,7 @@
 - Add items to **cart**, place orders, and choose payment method:
   - 💳 Card (Stripe)
   - 💵 Cash on Delivery (COD)
+- Receive email notifications via **Nodemailer** (Free Tier)
 - View order history and download **invoices**
 
 ### 🛠️ Admin Features
@@ -33,5 +34,12 @@
 - **Database**: MongoDB with Mongoose
 - **Authentication**: JSON Web Tokens (JWT)
 - **Payments**: Stripe Integration
+- **Email Service**: Nodemailer (Free Tier)
 - **Charts & Analytics**: Chart.js via `react-chartjs-2`
 - **PDF/Invoice**: PDF download support for order invoices
+
+---
+
+## ⚠️ Disclaimer
+
+All product images used in this project are **not owned by me**. They are used solely for educational and demonstration purposes. **I do not claim ownership of any images** displayed on the site.

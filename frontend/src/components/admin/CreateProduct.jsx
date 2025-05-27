@@ -14,7 +14,7 @@ const CreateProduct = () => {
     description: "",
     price: "",
     stock: "",
-    category: "",
+    category:  PRODUCT_CATEGORY[0],
     seller: "",
   });
 
